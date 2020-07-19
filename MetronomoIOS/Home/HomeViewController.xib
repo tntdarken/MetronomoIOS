@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MetronomoIOS" customModuleProvider="target">
+            <connections>
+                <outlet property="slider" destination="d46-Sw-dzY" id="Xda-iL-VPu"/>
+                <outlet property="sliderNumero" destination="n4z-3x-XWa" id="uOM-O5-u8k"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="1" maxValue="220" translatesAutoresizingMaskIntoConstraints="NO" id="d46-Sw-dzY">
+                    <rect key="frame" x="10" y="598.5" width="748" height="31"/>
+                    <color key="minimumTrackTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="maximumTrackTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="updateMetronomoWithSender:" destination="-1" eventType="valueChanged" id="xED-nw-JCW"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metronomo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO4-jS-6d3">
+                    <rect key="frame" x="273" y="93" width="222" height="54"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAJ-BZ-A7g">
+                    <rect key="frame" x="200" y="888" width="41" height="30"/>
+                    <state key="normal" title="Iniciar">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="start" destination="-1" eventType="touchUpInside" id="FuD-O3-vkn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTh-Es-la7">
+                    <rect key="frame" x="531" y="888" width="37" height="30"/>
+                    <state key="normal" title="Parar">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="stop" destination="-1" eventType="touchUpInside" id="9lJ-xW-7tb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4z-3x-XWa">
+                    <rect key="frame" x="100" y="493" width="568" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.21422917845190639" green="0.14580239326776506" blue="0.30409263959390864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="n4z-3x-XWa" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="43E-gs-YZd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zTh-Es-la7" secondAttribute="bottom" constant="106" id="4iV-dA-aYE">
+                    <variation key="heightClass=compact-widthClass=compact" constant="25"/>
+                    <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                </constraint>
+                <constraint firstItem="JO4-jS-6d3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="93" id="7I1-4d-6eD">
+                    <variation key="heightClass=compact-widthClass=compact" constant="25"/>
+                    <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                </constraint>
+                <constraint firstItem="n4z-3x-XWa" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="8F0-Jz-bgD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n4z-3x-XWa" secondAttribute="trailing" constant="100" id="8ZS-KU-4eo"/>
+                <constraint firstItem="n4z-3x-XWa" firstAttribute="top" secondItem="JO4-jS-6d3" secondAttribute="bottom" constant="200" id="BRe-QG-JrE">
+                    <variation key="heightClass=compact-widthClass=compact" constant="50"/>
+                    <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="200"/>
+                </constraint>
+                <constraint firstItem="n4z-3x-XWa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="Idx-Bm-1jv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d46-Sw-dzY" secondAttribute="trailing" constant="12" id="NiB-YM-H38"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zTh-Es-la7" secondAttribute="trailing" constant="73" id="Q4C-g7-MVu">
+                    <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                </constraint>
+                <constraint firstItem="d46-Sw-dzY" firstAttribute="top" secondItem="n4z-3x-XWa" secondAttribute="bottom" constant="67" id="WLt-hk-wed">
+                    <variation key="heightClass=compact-widthClass=compact" constant="45"/>
+                </constraint>
+                <constraint firstItem="bAJ-BZ-A7g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="73" id="fJ3-qm-tQs">
+                    <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                </constraint>
+                <constraint firstItem="JO4-jS-6d3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hoG-Hk-OFd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bAJ-BZ-A7g" secondAttribute="bottom" constant="106" id="i1W-7b-clO">
+                    <variation key="heightClass=compact-widthClass=compact" constant="25"/>
+                    <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                </constraint>
+                <constraint firstItem="d46-Sw-dzY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="pnv-2n-XLA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="43E-gs-YZd"/>
+                    <exclude reference="8F0-Jz-bgD"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="43E-gs-YZd"/>
+                    <exclude reference="BRe-QG-JrE"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="8F0-Jz-bgD"/>
+                    <exclude reference="BRe-QG-JrE"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="139" y="121"/>
+        </view>
+    </objects>
+</document>
